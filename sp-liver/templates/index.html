@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Liver DiseasePredictor</title>
+      
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="./../static/styles.css">
+    </head>
+       <body>
+
+       <div class="container">
+            <h2 class='container_heading'><span class="heading_font">Liver Disease Predictor</span></h2>
+            
+    	</div>
+
+        
+    	<div class="prediction_container">
+    		<form action="{{ url_for('predict') }}" method="POST">
+                <input class="form-input" type="number" name="Age" placeholder="Age"><br>
+                <input class="form-input" type="text" name="Gender" placeholder="Gender"><br>
+                <input class="form-input" type="number" name="Total_Bilirubin" placeholder="Total_Bilirubin"><br>
+                <input class="form-input" type="number" name="Direct_Bilirubin" placeholder="Direct_Bilirubin"><br>
+                <input class="form-input" type="number" name="Alkaline_Phosphotase" placeholder="Alkaline_Phosphotase"><br>
+                <input class="form-input" type="number" name="Alamine_Aminotransferase" placeholder="Alamine_Aminotransferase"><br>
+                <input class="form-input" type="number" name="Aspartate_Aminotransferase" placeholder="Aspartate_Aminotransferase"><br>
+                <input class="form-input" type="number" name="Total_Protiens" placeholder="Total_Protiens"><br>
+                <input class="form-input" type="number" name="Albumin" placeholder="Albumin"><br>
+                <input class="form-input" type="number" name="Albumin_and_Globulin_Ratio" placeholder="Albumin_and_Globulin_Ratio"><br>
+                
+        		<input type="submit" class="button" value="Predict">
+        	</form>
+    	</div>
+
+        
+       
+
+    </body>
+</html>

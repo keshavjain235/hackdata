@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Liver Disease Predictor</title>
+		<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+		 <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+		 <link rel="stylesheet" type="text/css" href="./../static/styles.css">
+		
+	</head>
+
+    <body>
+
+       
+		<div class="container">
+            <h2 class='container_heading'><span class="heading_font">Liver Disease Predictor</span></h2>
+            
+    	</div>
+
+		
+		<div class="results">
+			{% if prediction==1 %}
+				<h1>Prediction: <span class='danger'>Sorry! You are a liver patient.</span></h1>
+				<img class="gif" src="{{ url_for('static', filename='diabetes.webp') }}" alt="Diabetes Image">
+			{% elif prediction==0 %}
+				<h1>Prediction: <span class='safe'>Congratulations! You are Safe</span></h1>
+				<img class="gif1" src="{{ url_for('static', filename='no-diabetes.webp') }}" alt="Not Diabetes Image">
+			{% endif %}
+		</div>
+
+		
+       
+
+	</body>
+</html>
